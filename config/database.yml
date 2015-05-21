@@ -1,0 +1,22 @@
+default: &default
+  adapter: postgresql
+  encoding: utf8
+  pool: 5
+  username: postgres
+  password: postgres
+
+development:
+  <<: *default
+  database: shop_development
+
+test:
+  <<: *default
+  database: shop_test
+
+production:
+  <<: *default
+  host: <%= ENV['RDS_HOSTNAME'] || 'localhost' %>
+  port: <%= ENV['RDS_PORT'] || '5432' %>
+  database: <%= ENV['RDS_DB_NAME'] || 'shop_production' %>
+  username: <%= ENV['RDS_USERNAME'] || ENV['SHOP_DATABASE_USER'] %>
+  password: <%= ENV['RDS_PASSWORD'] || ENV['SHOP_DATABASE_PASSWORD'] %>
