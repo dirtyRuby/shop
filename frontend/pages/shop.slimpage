@@ -8,7 +8,7 @@ html(lang='en' data-ng-app='app')
     meta(charset='utf-8')
     = stylesheet_link_tag 'manifests/shop'
 
-  body.admin-namespace
+  body.shop-namespace
 
     #app.app(ui-view='')
     = javascript_include_tag 'manifests/shop'
