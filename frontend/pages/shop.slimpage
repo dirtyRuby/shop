@@ -1,0 +1,14 @@
+doctype html
+html(lang='en' data-ng-app='app')
+  head
+    base(href="/")
+    meta(charset='utf-8')
+    title Easy Blog App
+    meta(name='description' content='My shpo')
+    meta(charset='utf-8')
+    = stylesheet_link_tag 'manifests/shop'
+
+  body.admin-namespace
+
+    #app.app(ui-view='')
+    = javascript_include_tag 'manifests/shop'
