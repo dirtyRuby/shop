@@ -37,4 +37,5 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-restangular', '1.4.0'
   gem 'rails-assets-angular-bootstrap'
   gem 'rails-assets-bootstrap'
+  gem 'rails-assets-font-awesome'
 end
